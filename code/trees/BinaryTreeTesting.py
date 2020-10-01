@@ -1,6 +1,6 @@
 from binaryTree import Node
 from binaryTree import BinaryTree
-from Traversals import preorder,postorder,inorder
+from Traversals import preorder,postorder,inorder,levelorder
 if __name__=="__main__":
     print("enter the number of elements in tree:")
     t=int(input())
@@ -22,6 +22,10 @@ if __name__=="__main__":
 
     print(" In order traversal of tree is :")
     inorder(bT.root)
+    
+    print("Level order traversal of tree is:")
+    levelorder(bT.root)
+    
 
 
 

@@ -19,3 +19,20 @@ def inorder(root):
     print(root.info)
     inorder(root.right)
 
+from collections import deque
+def levelorder(root):
+    if root is None:
+        return
+    result=[]
+    q=deque()
+    q.append(root)
+    node=None
+    while len(q)!=0:
+        node=q.popleft()
+        result.append(node.info)
+        if node.left:
+            q.append(node.left)
+        if node.right:
+            q.append(node.right)
+    for i in  result:
+        print(i)
